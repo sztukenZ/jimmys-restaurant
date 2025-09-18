@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.375rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+/* Header */
+#header-div {
+    
+}
