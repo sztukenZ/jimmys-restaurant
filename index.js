@@ -33,7 +33,26 @@ function renderOrderItems() {
     `;
   });
 
-  orderSection.innerHTML = orderHtml.join("");
+  return orderHtml.join("");
+}
+
+function renderOrderSection() {
+  console.log(orderedItems);
+  const totalPrice = orderedItems.reduce((sum, item) => sum + item.price, 0);
+
+  const orderSectionHtml = `
+  <h3>Your order</h3>
+
+      ${renderOrderItems()}
+
+      <div id="total-price">
+        <h3>Total price:</h3>
+        <h4>$${totalPrice}</h4>
+      </div>
+  <button class="green-btn">Complete order</button>
+  `;
+
+  orderSection.innerHTML = orderSectionHtml;
 }
 
 function renderProducts() {
@@ -62,8 +81,8 @@ function renderProducts() {
 
 function renderPage() {
   renderProducts();
-  if (orderedItems) {
-    renderOrderItems();
+  if (orderedItems.length > 0) {
+    renderOrderSection();
   }
 }
 
