@@ -7,6 +7,8 @@ const orderedItems = [];
 document.addEventListener("click", function (e) {
   if (e.target.dataset.product) {
     addItemToOrder(e.target.dataset.product);
+  } else if (e.target.dataset.remove) {
+    removeProduct(e.target.dataset.remove);
   }
 });
 
@@ -20,12 +22,12 @@ function addItemToOrder(itemId) {
 }
 
 function renderOrderItems() {
-  const orderHtml = orderedItems.map(function (item) {
+  const orderHtml = orderedItems.map(function (item, index) {
     return `
       <div class="order-product">
         <div class="order-product-info">
           <h3>${item.name}</h3>
-          <button class="remove-btn">remove</button>
+          <button class="remove-btn" data-remove="${index}">remove</button>
         </div>
 
         <h4>$${item.price}</h4>
@@ -53,6 +55,13 @@ function renderOrderSection() {
   `;
 
   orderSection.innerHTML = orderSectionHtml;
+}
+
+function removeProduct(productIndex) {
+  console.log("Item removed");
+  orderedItems.splice(Number(productIndex), 1);
+  console.log(orderedItems);
+  renderPage();
 }
 
 function renderProducts() {
@@ -83,6 +92,8 @@ function renderPage() {
   renderProducts();
   if (orderedItems.length > 0) {
     renderOrderSection();
+  } else {
+    orderSection.innerHTML = "";
   }
 }
 
