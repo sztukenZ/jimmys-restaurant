@@ -27,15 +27,9 @@ h4 {
     font-size: 20px;
 }
 
-/* 
-p {
-    margin-top: 0;
-    color: #8B8B8B;
-} */
 
 /* Header */
 header {
-    /* width: 600px; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/burger.jpg");
     background-size: cover;
     background-position: center;
@@ -59,6 +53,7 @@ header {
     border-bottom: 1px solid #D2D2D2;
     justify-content: space-between;
     align-items: center;
+    padding-top: 45px;
 }
 
 .product p {
@@ -69,7 +64,6 @@ header {
 .product-info {
     display: flex;
     align-items: center;
-    /* border: 1px solid red; */
     justify-content: center;
 }
 
@@ -77,10 +71,44 @@ header {
     font-family: "Inter", sans-serif;
     font-size: 78px;
     margin-right: 30px;
-    /* border: 1px solid red; */
 }
 
-.add-product {
+.product-data {
+    margin-top: 20px;
+}
+
+/* Order section */
+#order {
+    width: 50%;
+    margin: 45px auto;
+    text-align: center;
+    /* border: 1px solid green; */
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+.order-product-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#total-price {
+    border-top: 2px solid #393333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Buttons */
+
+.add-product-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,10 +118,29 @@ header {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    line-height: 50px;
     font-weight: 200;
     background-color: #FFFFFF;
 }
 
-.add-product:active {
+.add-product-btn:active {
     background-color: #8B8B8B;
+}
+
+.remove-btn {
+    color: #BBBBBB;
+    border: none;
+    background-color: #FFFFFF;
+    margin-left: 13px;
+}
+
+.green-btn {
+    background-color: #16DB99;
+    color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 18px 0;
+    border-radius: 3px;
 }

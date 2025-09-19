@@ -16,19 +16,24 @@
       </div>
     </header>
     <section id="products">
-      <!-- JS providing products here -->
-      <div class="product">
-        <div class="product-info">
-          <div class="product-emoji">🍕</div>
-          <div class="product-data">
-            <h3>Pizza</h3>
-            <p>Ingredients</p>
-            <h4>$15</h4>
-          </div>
-        </div>
-        <button class="add-product">+</button>
-      </div>
+      <!-- Available products here -->
     </section>
-    <script src="index.js"></script>
+    <section id="order">
+      <h3>Your order</h3>
+      <div class="order-product">
+        <div class="order-product-info">
+          <h3>Pizza</h3>
+          <button class="remove-btn">remove</button>
+        </div>
+
+        <h4>$14</h4>
+      </div>
+      <div id="total-price">
+        <h3>Total price:</h3>
+        <h4>$14</h4>
+      </div>
+      <button class="green-btn">Complete order</button>
+    </section>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
