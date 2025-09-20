@@ -21,12 +21,36 @@
     <section id="order">
       <!-- Order information here -->
     </section>
-    <section id="modal">
+    <!-- overlay -->
+    <div class="overlay" aria-hidden="true"></div>
+    <section id="modal" role="dialog" aria-modal="true">
+      <form>
         <p>Enter card details</p>
-        <input type="text" required placeholder="Enter your name" id="customer-name" name="customer-name">
-        <input type="number" required placeholder="Enter card number" id="card-number" name="card-number">
-        <input type="number" required maxlength="3" placeholder="Enter cvv number" id="cvv-number" name="cvv-number">
-        <button type="submit" class="green-btn">Pay</button>
+        <input
+          type="text"
+          required
+          placeholder="Enter your name"
+          id="customer-name"
+          name="customer-name"
+        />
+        <input
+          type="number"
+          required
+          placeholder="Enter card number"
+          id="card-number"
+          name="card-number"
+        />
+        <input
+          type="text"
+          required
+          placeholder="Enter CVV"
+          maxlength="3"
+          pattern="\d{3}"
+          id="cvv-number"
+          name="cvv-number"
+          title="Podaj wartość w postaci 3 cyfr!"
+        />
+        <button type="submit" class="green-btn" id="pay-btn">Pay</button>
       </form>
     </section>
     <script src="index.js" type="module"></script>
